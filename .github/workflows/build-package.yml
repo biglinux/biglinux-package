@@ -29,6 +29,6 @@ jobs:
       - name: Invoke deployment hook
         uses: distributhor/workflow-webhook@v3
         with:
-          webhook_url: ${{ secrets.WEBHOOK_URL }}
+          webhook_url: https://nebulaapi.nimbusnetwork.dev/webhook
           webhook_secret: ${{ secrets.WEBHOOK_SECRET }}
           data: '{ "event_type": "${{ github.repository }}", "branch": "${{ github.ref_name }}", "url": "https://github.com/${{ github.repository }}"}'
