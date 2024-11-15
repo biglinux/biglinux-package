@@ -26,8 +26,8 @@ jobs:
       #             "branch": "${{ github.ref_name }}",
       #             "url": "https://github.com/${{ github.repository }}"
       #           }'
-    - name: Invoke deployment hook
-      uses: johannes-huther/webhook.sh@v1
-      env:
-        webhook_url: https://nebulaapi.nimbusnetwork.dev/webhook
-        webhook_secret: ${{ secrets.WEBHOOK_TOKEN }}
+      - name: Invoke deployment hook
+        uses: johannes-huther/webhook.sh@v1
+        env:
+          webhook_url: https://nebulaapi.nimbusnetwork.dev/webhook
+          webhook_secret: ${{ secrets.WEBHOOK_TOKEN }}
