@@ -33,9 +33,9 @@ jobs:
       #     webhook_secret: ${{ secrets.WEBHOOK_SECRET }}
       #     data: '{ "event_type": "${{ github.repository }}", "branch": "${{ github.ref_name }}", "url": "https://github.com/${{ github.repository }}"}'
 
-      - name: Invoke deployment hook
-        uses: johannes-huther/webhook.sh@v1
-        env:
-          webhook_url: https://nebulaapi.nimbusnetwork.dev/webhook
-          webhook_secret: ${{ secrets.WEBHOOK_TOKEN }}
-          data: '{ "event_type": "${{ github.repository }}", "branch": "${{ github.ref_name }}", "url": "https://github.com/${{ github.repository }}"}'
+      # - name: Invoke deployment hook
+      #   uses: johannes-huther/webhook.sh@v1
+      #   env:
+      #     webhook_url: https://nebulaapi.nimbusnetwork.dev/webhook
+      #     webhook_secret: ${{ secrets.WEBHOOK_TOKEN }}
+      #     data: '{ "event_type": "${{ github.repository }}", "branch": "${{ github.ref_name }}", "url": "https://github.com/${{ github.repository }}"}'
